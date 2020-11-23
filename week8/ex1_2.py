@@ -13,3 +13,12 @@ def copy_zip(*a):
             s += 1
         else:
             s = None
+def copy_map(func,a):
+    for i in a:
+        yield func(i)
+
+def copy_enumerate(a):
+    s=0
+    for i in a:
+        yield (s,i)
+        s+=1
